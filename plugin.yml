@@ -1,0 +1,15 @@
+name: DreamCauldron
+main: com.MrSweeter.DreamCauldron.DreamCauldron
+version: 1.0
+author: MrSweeter / SweetDream
+description: Elf Cauldron, change your loot
+
+commands:
+    dreamcauldron:
+        description: Create new chat message !
+        usage: /dreamchat <name_msg> <time> <message>
+
+permissions: 
+    DreamCauldron.create:
+        description: Allow you to create new chat message
+        default: op
