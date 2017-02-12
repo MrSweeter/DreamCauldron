@@ -1,5 +1,5 @@
 name: DreamCauldron
-main: com.mrsweeter.plugin.DreamCauldron
+main: com.mrsweeter.dreamcauldron.DreamCauldron
 version: 1.1
 author: MrSweeter / SweetDream
 description: Magic Cauldron, change your loot

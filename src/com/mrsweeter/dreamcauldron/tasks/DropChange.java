@@ -1,4 +1,4 @@
-package com.mrsweeter.plugin.tasks;
+package com.mrsweeter.dreamcauldron.tasks;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import com.mrsweeter.plugin.DreamCauldron;
+import com.mrsweeter.dreamcauldron.DreamCauldron;
 
 public class DropChange extends BukkitRunnable {
 
@@ -72,8 +72,8 @@ public class DropChange extends BukkitRunnable {
 					// Cauldron OK ?
 					if (locCauldron.getBlock().getType() == Material.CAULDRON) {
 
-						items = com.mrsweeter.plugin.events.Items.getItemsConfig(section);
-						drop = com.mrsweeter.plugin.events.Items.getDropConfig(section);
+						items = com.mrsweeter.dreamcauldron.events.Items.getItemsConfig(section);
+						drop = com.mrsweeter.dreamcauldron.events.Items.getDropConfig(section);
 
 						// DropChance 100 ?
 						if (items.size() == 100) {

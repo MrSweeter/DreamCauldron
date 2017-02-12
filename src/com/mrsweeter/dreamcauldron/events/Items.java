@@ -1,4 +1,4 @@
-package com.mrsweeter.plugin.events;
+package com.mrsweeter.dreamcauldron.events;
 
 import java.util.ArrayList;
 import java.util.List;

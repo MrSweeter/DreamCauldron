@@ -1,10 +1,10 @@
-package com.mrsweeter.plugin.commands;
+package com.mrsweeter.dreamcauldron.Commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import com.mrsweeter.plugin.DreamCauldron;
+import com.mrsweeter.dreamcauldron.DreamCauldron;
 
 public class Commands implements CommandExecutor {
 	
