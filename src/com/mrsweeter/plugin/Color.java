@@ -1,4 +1,4 @@
-package com.MrSweeter.DreamCauldron;
+package com.mrsweeter.plugin;
 
 public class Color {
 	

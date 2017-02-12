@@ -1,4 +1,4 @@
-package com.MrSweeter.DreamCauldron;
+package com.mrsweeter.plugin;
 
 import java.util.logging.Logger;
 
@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import CommandsDC.Commands;
-import Events.Drop;
+import com.mrsweeter.plugin.commands.Commands;
+import com.mrsweeter.plugin.events.Drop;
 
 public class DreamCauldron extends JavaPlugin {
 

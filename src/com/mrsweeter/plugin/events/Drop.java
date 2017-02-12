@@ -1,11 +1,11 @@
-package Events;
+package com.mrsweeter.plugin.events;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import com.MrSweeter.DreamCauldron.DreamCauldron;
+import com.mrsweeter.plugin.DreamCauldron;
 
 public class Drop implements Listener	{
 
@@ -18,7 +18,7 @@ public class Drop implements Listener	{
 	@EventHandler
 	public void onDrop(PlayerDropItemEvent event)	{
 		
-		BukkitRunnable task = new Tasks.DropChange(pl, event);
+		BukkitRunnable task = new com.mrsweeter.plugin.tasks.DropChange(pl, event);
 		task.runTaskLater(pl, 30);
 		
 		

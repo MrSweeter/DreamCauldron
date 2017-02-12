@@ -1,4 +1,4 @@
-package Events;
+package com.mrsweeter.plugin.events;
 
 import java.util.ArrayList;
 import java.util.List;
