@@ -1,43 +1,35 @@
 package com.MrSweeter.DreamCauldron;
 
-import java.io.File;
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import CommandsDC.Commands;
 import Events.Drop;
 
-public class DreamCauldron extends JavaPlugin	{
-	
+public class DreamCauldron extends JavaPlugin {
+
 	Logger log = Logger.getLogger("Minecraft");
 	public static FileConfiguration config;
-	public static YamlConfiguration items;
-	public File itemsFile;
 	public static PluginManager pm = Bukkit.getPluginManager();
 
 	public void onEnable() {
 
-		// Generate/repair config
 		saveDefaultConfig();
-		Config.onLoad(this, "items.yml");
 
-		// Listen event on server
-		// pm = getServer().getPluginManager();
-
-		// EventListener
 		pm.registerEvents(new Drop(this), this);
+		getCommand("dcreload").setExecutor(new Commands(this));
 
-		log.info("=============== DreamCauldron enable ===============");
+		log.info(Color.GREEN + "=============== " + Color.YELLOW + "DreamCauldron enable" + Color.GREEN + " ===============" + Color.RESET);
 
 	}
 
 	public void onDisable() {
-		
-		log.info("=============== DreamCauldron disable ===============");
 
-	}	
+		log.info(Color.GREEN + "=============== " + Color.YELLOW + "DreamCauldron disable" + Color.GREEN + " ===============" + Color.RESET);
+
+	}
 }

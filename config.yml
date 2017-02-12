@@ -1,5 +1,35 @@
-spawn:
+shop:
   world: world
   x: 0
   y: 75
   z: 0
+  particle: TOTEM
+  sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  drops:
+    diamond: 10
+    emerald: 10
+    gold_ingot: 30
+    iron_ingot: 50
+  drops_allow:
+  - redstone
+  - coal
+  - nether_star
+spawn:
+  world: world
+  x: 10
+  y: 80
+  z: 10
+  particle: DRAGON_BREATH
+  sound: ENTITY_WITCH_DRINK
+  drops:
+    diamond: 1
+    emerald: 1
+    gold_ingot: 3
+    iron_ingot: 5
+    redstone: 3
+    coal: 7
+    sand: 80
+  drops_allow:
+  - stone
+  - dirt
+  - cobblestone
