@@ -7,9 +7,18 @@ description: Magic Cauldron, change your loot
 commands:
     dcreload:
         description: Reload config !
-        usage: /dcreload
+        usage: §c/dcreload
+    dccreate:
+        description: Create a magic cauldron where you are !
+        usage: §c/dccreate <name> <type>
+    dcremove:
+        description: Remove a magic cauldron where you are !
+        usage: §c/dcremove <name>
 
 permissions: 
     dreamCauldron.reload:
         description: Allow you to reload config of DreamCauldron
+        default: op
+    dreamCauldron.modify:
+        description: Allow you to create/remove cauldron
         default: op

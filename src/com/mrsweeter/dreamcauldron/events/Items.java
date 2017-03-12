@@ -26,8 +26,8 @@ public class Items {
 
 		// Default item
 		if (matItem.size() != 100) {
-			Bukkit.broadcastMessage("§cThe rate of total drops is equal to §a" + matItem.size()
-					+ " §c(default_drop:blue orchid)§c, please check §aitems.yml");
+			Bukkit.broadcastMessage("§c[§aDreamCauldron§c] §7The rate of total drops is equal to §a" + matItem.size()
+					+ " §7(default_drop:blue orchid), please check §aconfig.yml");
 			matItem = new ArrayList<>();
 			ItemStack orchid = new ItemStack(Material.RED_ROSE, 1, (byte) 1);
 			matItem.add(orchid.getType());
@@ -57,7 +57,7 @@ public class Items {
 
 		// Default item
 		if (matDrop.size() == 0) {
-			Bukkit.broadcastMessage("§cThe drop list is empty (default_drop:orchid)§c, please check §aitems.yml");
+			Bukkit.broadcastMessage("§c[§aDreamCauldron§c] §7The drop list is empty (default_drop:orchid), please check §aconfig.yml");
 			matDrop = new ArrayList<>();
 			ItemStack orchid = new ItemStack(Material.RED_ROSE, 1, (byte) 1);
 			matDrop.add(orchid);

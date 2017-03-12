@@ -21,7 +21,10 @@ public class DreamCauldron extends JavaPlugin {
 		saveDefaultConfig();
 
 		pm.registerEvents(new Drop(this), this);
+		
 		getCommand("dcreload").setExecutor(new Commands(this));
+		getCommand("dccreate").setExecutor(new Commands(this));
+		getCommand("dcremove").setExecutor(new Commands(this));
 
 		log.info(Color.GREEN + "=============== " + Color.YELLOW + "DreamCauldron enable" + Color.GREEN + " ===============" + Color.RESET);
 
