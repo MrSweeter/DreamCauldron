@@ -1,6 +1,6 @@
 name: DreamCauldron
 main: com.mrsweeter.dreamcauldron.DreamCauldron
-version: 1.1
+version: 1.2
 author: MrSweeter / SweetDream
 description: Magic Cauldron, change your loot
 
@@ -12,13 +12,15 @@ commands:
         description: Create a magic cauldron where you are !
         usage: §c/dccreate <name> <type>
     dcremove:
-        description: Remove a magic cauldron where you are !
+        description: Remove a magic cauldron !
         usage: §c/dcremove <name>
 
 permissions: 
-    dreamCauldron.reload:
+    dreamcauldron.reload:
         description: Allow you to reload config of DreamCauldron
         default: op
-    dreamCauldron.modify:
+    dreamcauldron.modify:
         description: Allow you to create/remove cauldron
         default: op
+    dreamcauldron.blockID:
+        description: Allow you to convert blockID

@@ -27,7 +27,11 @@ public class DreamCauldron extends JavaPlugin {
 		getCommand("dcremove").setExecutor(new Commands(this));
 
 		log.info(Color.GREEN + "=============== " + Color.YELLOW + "DreamCauldron enable" + Color.GREEN + " ===============" + Color.RESET);
-
+		Updater updater = new Updater(37581);
+		if (updater.checkUpdate(this.getDescription().getVersion()) && Updater.updateAvailable())	{
+			log.warning(Color.RED + "=============== A newest version of DreamSkull is available ===============" + Color.RESET);
+		}
+		
 	}
 
 	public void onDisable() {

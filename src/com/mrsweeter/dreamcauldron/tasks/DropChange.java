@@ -72,7 +72,7 @@ public class DropChange extends BukkitRunnable {
 					// Particle and Sound
 					Particle particle = Particle.valueOf(section.getString("particle").toUpperCase().trim());
 					Sound sound = Sound.valueOf(section.getString("sound").toUpperCase().trim());
-
+					
 					// Cauldron OK ?
 					if (locCauldron.getBlock().getType() == Material.CAULDRON) {
 
@@ -81,21 +81,25 @@ public class DropChange extends BukkitRunnable {
 						// Dropped item OK ?
 						if (drop.contains(itemDrop)) {
 							
-							items = Items.getItemsConfig(section);
+							if (event.getPlayer().hasPermission("dreamcauldron." + item.getType().toString().toLowerCase().trim()) || event.getPlayer().isOp() || event.getPlayer().hasPermission("dreamcauldron.blockID"))	{
+								items = Items.getItemsConfig(section);
+		
+								// DropChance 100 ?
+								if (items.size() == 100) {
+		
+									int random = (int) (Math.random() * 100);
+									ItemStack loot = new ItemStack(items.get(random), quantity);
 	
-							// DropChance 100 ?
-							if (items.size() == 100) {
-	
-								int random = (int) (Math.random() * 100);
-								ItemStack loot = new ItemStack(items.get(random), quantity);
-
-								worldItem.spawnParticle(particle, locParticle, 20, 0.5, 0.5, 0.5, 0.1);
-								event.getPlayer().playSound(locParticle, sound, 1, 1);
-								itemToChange.setItemStack(loot);
-	
-							} else if (items.size() == 1) {
-								ItemStack loot = new ItemStack(items.get(0), 1, (byte) 1);
-								itemToChange.setItemStack(loot);
+									worldItem.spawnParticle(particle, locParticle, 20, 0.5, 0.5, 0.5, 0.1);
+									event.getPlayer().playSound(locParticle, sound, 1, 1);
+									itemToChange.setItemStack(loot);
+		
+								} else if (items.size() == 1) {
+									ItemStack loot = new ItemStack(items.get(0), 1, (byte) 1);
+									itemToChange.setItemStack(loot);
+								}
+							} else {
+								event.getPlayer().sendMessage("§c[§aDreamCauldron§c] §7You aren't allowed to convert this item");
 							}
 						}
 					}

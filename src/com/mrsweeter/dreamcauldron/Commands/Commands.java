@@ -26,7 +26,7 @@ public class Commands implements CommandExecutor, TabCompleter {
 		if (args.length == 0)	{
 			switch (commandLabel)	{
 			case "dcreload":
-				if (sender.hasPermission("dreamCauldron.reload"))	{
+				if (sender.hasPermission("dreamcauldron.reload"))	{
 					pl.reloadConfig();
 					sender.sendMessage("§c[§aDreamCauldron§c] §7Reload complete");
 				} else	{
@@ -37,14 +37,14 @@ public class Commands implements CommandExecutor, TabCompleter {
 		} else if (args.length >= 1)	{
 			switch (commandLabel)	{
 			case "dcremove":
-				if (sender.hasPermission("dreamCauldron.modify"))	{
+				if (sender.hasPermission("dreamcauldron.modify"))	{
 					CommandExecute.removeCauldron((Player)sender, pl, args[0].trim());
 				} else	{
 					sender.sendMessage("§cYou aren't allow do to this");
 				}
 				return true;
 			case "dccreate":
-				if (sender.hasPermission("dreamCauldron.modify") && sender instanceof Player)	{
+				if (sender.hasPermission("dreamcauldron.modify") && sender instanceof Player)	{
 					CommandExecute.createCauldron((Player)sender, pl, args);
 				} else	{
 					sender.sendMessage("§cYou aren't allow do to this");
